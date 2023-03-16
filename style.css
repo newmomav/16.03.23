@@ -1,0 +1,63 @@
+body {
+  background-color: rgba(84, 154, 94, 0.2);
+  font-size: 38px;
+  color: #fb7185;
+}
+
+#container {
+  margin: 3em;
+  width: 200px;
+}
+
+p {
+  color: rgb(6, 75, 135);
+}
+
+span {
+  color: rgb(6, 75, 135);
+}
+
+.myClass {
+  display: flex;
+  justify-content: space-between;
+}
+.myClass li {
+  list-style: none;
+  background-color: #fff709;
+}
+.myClass:hover li {
+  background-color: aliceblue;
+}
+
+.nested p {
+  background-color: lightcyan;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  text-decoration: none;
+}
+
+.example-1 {
+  font-size: 1em;
+  transition-property: coucou;
+  transition-duration: 1s;
+  transition-delay: 2s;
+}
+
+example-2 {
+  font-family: helvetica;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.lastClass {
+  border-bottom: 10px solid blue;
+}/*# sourceMappingURL=style.css.map */

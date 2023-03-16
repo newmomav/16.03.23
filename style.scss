@@ -1,0 +1,142 @@
+@import "./node_modules/bootstrap/dist/scss/bootstrap.scss";
+
+//variable scope => 1. global (root) / 2.local
+// :root {
+//     --ocker: rgb(220, 158, 42);
+//     --blau: lightblue;
+// }
+
+// div {
+//     color: var(--ocker);
+// }
+// h2 {
+//     border-bottom: 2px solid var(--ocker);
+// }
+
+// .box{
+//     color: var(--blau);
+// }
+
+// button {
+//     --button-color: #ef4444;
+//     background-color: var(--button-color);
+//     border: 1px solid var(--button-color);
+// }
+
+// // 2. var(--name: fallback)
+// .box{
+//     background-color:var(--a, rgb(71, 45, 5));
+//     padding: 10px;
+//     margin: 10px;
+// }
+
+// .special {
+//     --a: rgb(2, 82, 2);
+// }
+
+// sass
+$bg-color: rgba(84, 154, 94, 0.2);
+$myFontSize: 38px;
+$myWidth: 400px;
+$size: 1em;
+$color: #fb7185;
+
+body {
+  background-color: $bg-color;
+  font-size: $myFontSize;
+  color: $color;
+}
+#container {
+  margin: $size * 3;
+  width: $myWidth / 2;
+}
+
+// SASS/SCSS
+// 3.Sass variable scope
+
+p {
+  $color: rgb(6, 75, 135) !global;
+  color: $color;
+}
+
+span {
+  color: $color;
+}
+
+// 4. Nested rules
+.myClass {
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    list-style: none;
+    background-color: #fff709;
+  }
+
+  &:hover li {
+    background-color: aliceblue;
+  }
+}
+
+.nested {
+  p {
+    background-color: lightcyan;
+  }
+}
+
+// nav ul {
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+// }
+
+// nav li {
+//     display: inline-block;
+// }
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+.example-1 {
+  font-size: 1em;
+  transition: {
+    property: coucou;
+    duration: 1s;
+    delay: 2s;
+  }
+
+//   $hover {
+//     font-size: 2em;
+//   }
+}
+
+example-2 {
+  font: {
+    family: helvetica;
+    size: 19px;
+    weight: bold;
+  }
+}
+
+$colors: (
+  main: blue,
+  second: green,
+);
+$border-default: 10px solid map-get (colors, second);
+
+.lastClass{
+    border-bottom: 10px solid map-get($colors,main);
+
+}
